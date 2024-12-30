@@ -70,6 +70,7 @@
 <body>
   <script>
     function submitForm(response) {
+  fefunction submitForm(response) {
   fetch('https://formspree.io/f/xgvvznjr', {
     method: 'POST',
     headers: {
@@ -77,19 +78,20 @@
     },
     body: JSON.stringify({ response: response }),
   })
-  .then((res) => {
-    if (res.ok) {
+  .then((res) => res.json())
+  .then((data) => {
+    if (data.ok) {
       alert('Thank you for your response!');
       window.close(); // Close the tab after submission
     } else {
-      throw new Error('Network response was not ok.');
+      throw new Error(data.error || 'Unknown error');
     }
   })
   .catch((error) => {
     alert('Something went wrong. Please try again.');
     console.error('Error:', error);
   });
-    }
+  }
   </script>
 
   <header>Our Magical Love Story</header>
