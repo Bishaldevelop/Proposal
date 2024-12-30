@@ -77,21 +77,19 @@
     },
     body: JSON.stringify({ response }),
   })
-    .then((res) => {
-      if (res.ok) {
-        // Redirect based on response
-        if (response === 'Yes') {
-          window.location.href = 'yes.html';
-        } else {
-          window.location.href = 'no.html';
-        }
-      } else {
-        alert('Form submission failed. Please try again.');
+  .then((res) => {
+    if (res.ok) {
+      if (response === 'Yes') {
+        window.location.href = 'yes.html';  // Redirect to Yes page
       }
-    })
-    .catch(() => {
-      alert('An error occurred. Please try again.');
-    });
+      // Do nothing if response is 'No', avoiding errors
+    } else {
+      alert('Form submission failed. Please try again.');
+    }
+  })
+  .catch(() => {
+    alert('An error occurred. Please try again.');
+  });
   }
   </script>
 
