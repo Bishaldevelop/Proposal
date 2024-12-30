@@ -69,29 +69,30 @@
 </head>
 <body>
   <script>
-    function submitForm(response) {
+  function submitForm(response) {
   fetch('https://formspree.io/f/xgvvznjr', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ response: response }),
+    body: JSON.stringify({ response }),
   })
-    .then((response) => {
-      if (response.ok) {
+    .then((res) => {
+      if (res.ok) {
+        // Redirect based on response
         if (response === 'Yes') {
           window.location.href = 'yes.html';
         } else {
           window.location.href = 'no.html';
         }
       } else {
-        throw new Error('Network response was not ok');
+        alert('Form submission failed. Please try again.');
       }
     })
     .catch(() => {
-      alert('Something went wrong. Please try again.');
+      alert('An error occurred. Please try again.');
     });
-    }
+  }
   </script>
 
   <header>How it really began </header>
