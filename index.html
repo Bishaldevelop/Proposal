@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Forever?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to right, #ffafbd, #ffc3a0);
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 50px;
+      font-size: 3em;
+      font-weight: bold;
+      color: #ffe4e1;
+      text-shadow: 2px 2px 5px #ff6f91;
+    }
+    .container {
+      margin: 50px auto;
+      max-width: 800px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.3em;
+      line-height: 1.8em;
+    }
+    .btn {
+      display: inline-block;
+      margin: 20px 10px;
+      padding: 15px 40px;
+      font-size: 1.2em;
+      color: #fff;
+      background: #ff6f91;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: #ff4e6e;
+      transform: scale(1.1);
+    }
+    .heart {
+      font-size: 5em;
+      animation: heartbeat 1s infinite;
+    }
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+  document.body.addEventListener("click", function() {
+    window.close(); // Closes the current browser tab
+  });
+</script>
+  <header>Our Magical Love Story</header>
+
+  <div class="container">
+    <h2>How We Began</h2>
+    <p>From the very first moment I came across your posts, something clicked. Even though we haven't talked yet, my heart feels connected to yours.</p>
+    <p>It's like the universe brought us together through mutual understanding, and I couldn't resist asking you something that’s been on my mind for a long time.</p>
+  </div>
+
+  <div class="container">
+    <h2>The Big Question</h2>
+    <div id="heart" class="heart">❤️</div>
+    <p>Would you be willing to take a chance with me and be a part of my world? Will you be mine forever?</p>
+    <button class="btn" onclick="location.href='yes.html'">Yes, Forever! 💖</button>
+    <button class="btn" onclick="location.href='no.html'">No, Never! 😔</button>
+  </div>
+</body>
+</html>
